@@ -1,0 +1,91 @@
+openapi: 3.0.2
+info:
+  title: Batch RUN API
+  description: API for managing batch runs
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /run:
+    post:
+      summary: Start a new run
+      description: Start a new run with the provided parameters
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - type
+                - cob_date
+                - run_group
+                - scenario
+              properties:
+                type:
+                  type: string
+                  description: Type of run
+                cob_date:
+                  type: string
+                  description: COB date
+                run_group:
+                  type: string
+                  description: Run group
+                scenario:
+                  type: string
+                  description: Scenario
+      responses:
+        201:
+          description: Run started successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  run_id:
+                    type: string
+                    description: ID of the started run
+  /run/{run_id}/status:
+    post:
+      summary: Get the status of a run
+      description: Get the status of a run with the provided ID
+      parameters:
+        - in: path
+          name: run_id
+          required: true
+          schema:
+            type: string
+          description: ID of the run
+      responses:
+        200:
+          description: Run status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: Status of the run
+  /run/{run_id}/kill:
+    post:
+      summary: Kill a run
+      description: Kill a run with the provided ID
+      parameters:
+        - in: path
+          name: run_id
+          required: true
+          schema:
+            type: string
+          description: ID of the run
+      responses:
+        200:
+          description: Run killed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Success message
