@@ -1,0 +1,123 @@
+[
+  {
+    "cob_date": "2024-06-30",
+    "portfolio": "CNI",
+    "lob": "CB",
+    "sub_lob": "AWM",
+    "used_exposure_amount": 5000000,
+    "unused_exposure_amount": 2000000,
+    "loss_given_default": 0.3,
+    "maturity_date": "2029-06-30",
+    "batch_id": "BATCH12345",
+    "run_group": "official"
+  },
+  {
+    "cob_date": "2024-09-30",
+    "portfolio": "CRE",
+    "lob": "CCB",
+    "sub_lob": "CCB-BB",
+    "used_exposure_amount": 7000000,
+    "unused_exposure_amount": 3000000,
+    "loss_given_default": 0.25,
+    "maturity_date": "2030-09-30",
+    "batch_id": "BATCH12346",
+    "run_group": "prelim"
+  },
+  {
+    "cob_date": "2024-06-30",
+    "portfolio": "BB",
+    "lob": "AWM",
+    "sub_lob": "AWM",
+    "used_exposure_amount": 4500000,
+    "unused_exposure_amount": 1500000,
+    "loss_given_default": 0.4,
+    "maturity_date": "2028-06-30",
+    "batch_id": "BATCH12347",
+    "run_group": "official"
+  },
+  {
+    "cob_date": "2024-09-30",
+    "portfolio": "CNI",
+    "lob": "CCB",
+    "sub_lob": "AWM",
+    "used_exposure_amount": 6000000,
+    "unused_exposure_amount": 2500000,
+    "loss_given_default": 0.35,
+    "maturity_date": "2031-09-30",
+    "batch_id": "BATCH12348",
+    "run_group": "prelim"
+  },
+  {
+    "cob_date": "2024-06-30",
+    "portfolio": "CRE",
+    "lob": "CB",
+    "sub_lob": "CCB-BB",
+    "used_exposure_amount": 5500000,
+    "unused_exposure_amount": 3500000,
+    "loss_given_default": 0.2,
+    "maturity_date": "2027-06-30",
+    "batch_id": "BATCH12349",
+    "run_group": "official"
+  },
+  {
+    "cob_date": "2024-09-30",
+    "portfolio": "BB",
+    "lob": "AWM",
+    "sub_lob": "AWM",
+    "used_exposure_amount": 4000000,
+    "unused_exposure_amount": 2000000,
+    "loss_given_default": 0.45,
+    "maturity_date": "2026-09-30",
+    "batch_id": "BATCH12350",
+    "run_group": "prelim"
+  },
+  {
+    "cob_date": "2024-06-30",
+    "portfolio": "CNI",
+    "lob": "CB",
+    "sub_lob": "AWM",
+    "used_exposure_amount": 6500000,
+    "unused_exposure_amount": 3000000,
+    "loss_given_default": 0.3,
+    "maturity_date": "2029-06-30",
+    "batch_id": "BATCH12351",
+    "run_group": "official"
+  },
+  {
+    "cob_date": "2024-09-30",
+    "portfolio": "CRE",
+    "lob": "CCB",
+    "sub_lob": "CCB-BB",
+    "used_exposure_amount": 7500000,
+    "unused_exposure_amount": 4500000,
+    "loss_given_default": 0.25,
+    "maturity_date": "2032-09-30",
+    "batch_id": "BATCH12352",
+    "run_group": "prelim"
+  },
+  {
+    "cob_date": "2024-06-30",
+    "portfolio": "BB",
+    "lob": "AWM",
+    "sub_lob": "AWM",
+    "used_exposure_amount": 5000000,
+    "unused_exposure_amount": 1000000,
+    "loss_given_default": 0.35,
+    "maturity_date": "2027-06-30",
+    "batch_id": "BATCH12353",
+    "run_group": "official"
+  },
+  {
+    "cob_date": "2024-09-30",
+    "portfolio": "CNI",
+    "lob": "CB",
+    "sub_lob": "AWM",
+    "used_exposure_amount": 4000000,
+    "unused_exposure_amount": 1000000,
+    "loss_given_default": 0.5,
+    "maturity_date": "2026-09-30",
+    "batch_id": "BATCH12354",
+    "run_group": "prelim"
+  }
+]
+

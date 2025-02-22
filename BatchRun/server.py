@@ -4,6 +4,7 @@ from flask_restful import Api, Resource, reqparse
 from flask_swagger_ui import get_swaggerui_blueprint
 import run_service
 import logging
+import json
 
 #configure logging for the main process
 logging.basicConfig(filename ='logs/server.log' ,level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -22,6 +23,7 @@ swaggerui_blueprint = get_swaggerui_blueprint(
         'app_name': "Batch RUN API"
     }
 )
+
 app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL) 
 
 @app.route('/')
@@ -65,9 +67,27 @@ class KillRun(Resource):
         run_service.kill_run(runId)
         return jsonify({'message': 'run killed successfully'}),200
     
+class GetRunInfo(Resource):
+    def __load_json_data(self):
+        with open('input.json') as f:
+            data = json.load(f)
+            return data
+    
+    def get(self):
+
+        cobDate = request.args.get('cob_date', default=None)
+        Portfolio = request.args.get('portfolio', default=None)
+        runGroup = request.args.get('run_group', default=None)
+        batchId = request.args.get('batch_id', default=None)
+
+        logger.info(f"Getting run info for cob ={cobDate}, Portfolio = {Portfolio}, runGroup = {runGroup}, batch = {batchId}")
+        # Return filtered data as JSON
+        return jsonify(run_service.get_run_info(cobDate, Portfolio, runGroup, batchId))
+    
 api.add_resource(Run,'/run')
 api.add_resource(RunStatus,'/run/<string:runId>/status')
 api.add_resource(KillRun, '/run/<string:runId>/kill')
+api.add_resource(GetRunInfo, '/runInfo')
 
 if __name__ == '__main__':
     run_service.initialize()

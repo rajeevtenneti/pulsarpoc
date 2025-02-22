@@ -6,6 +6,7 @@ import time
 import os
 import uuid
 import psutil
+import json
 
 
 # Set up logging configuration
@@ -121,3 +122,21 @@ def get_runs():
         progress = row[2]
         runs.append({'run_id': run_id, 'status': status, 'progress': progress})
     return runs
+
+def load_json_data():
+    with open('input.json') as f:
+        data = json.load(f)
+        return data
+
+def get_run_info(cobDate, Portfolio, runGroup, batchId):
+    # Load the data from the JSON file
+    data = load_json_data()
+
+    # Filter data based on the parameters
+    filtered_data = [record for record in data if
+                    (not cobDate or record["cob_date"] == cobDate) and
+                    (not Portfolio or record["portfolio"] == Portfolio) and
+                    (not runGroup or record["run_group"] == runGroup) and
+                    (not batchId or record["batch_id"] == batchId)]
+    
+    return filtered_data
