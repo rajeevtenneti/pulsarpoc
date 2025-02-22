@@ -89,6 +89,7 @@ paths:
         500:
           description: Internal server error
   /run/{run_id}/kill:
+
     post:
       summary: Kill a run
       description: Kill a run with the provided ID
@@ -106,6 +107,84 @@ paths:
           description: Run not found
         500:
           description: Internal server error
+  /runInfo:
+    get:
+      summary: Get filtered records
+      description: To retrieve CECL unadjusted results from a single calculator (e.g. either CNI or CRE)
+      operationId: getFilteredRecords
+      parameters:
+        - name: cob_date
+          in: query
+          description: Format = yyyy-mm-dd (e.g., 2024-06-30)
+          required: false
+          schema:
+            type: string
+            example: "2024-06-30"
+        - name: portfolio
+          in: query
+          description: Portfolio name (e.g., CNI, CRE, BB)
+          required: false
+          schema:
+            type: string
+            example: "CNI"
+        - name: run_group
+          in: query
+          description: Run group type (e.g., official, prelim)
+          required: false
+          schema:
+            type: string
+            example: "official"
+        - name: batch_id
+          in: query
+          description: Unique batch ID
+          required: false
+          schema:
+            type: string
+            example: "BATCH12345"
+      responses:
+        '200':
+          description: Filtered records based on query parameters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    cob_date:
+                      type: string
+                      example: "2024-06-30"
+                    portfolio:
+                      type: string
+                      example: "CNI"
+                    lob:
+                      type: string
+                      example: "CB"
+                    sub_lob:
+                      type: string
+                      example: "AWM"
+                    used_exposure_amount:
+                      type: number
+                      example: 5000000
+                    unused_exposure_amount:
+                      type: number
+                      example: 2000000
+                    loss_given_default:
+                      type: number
+                      example: 0.3
+                    maturity_date:
+                      type: string
+                      example: "2029-06-30"
+                    batch_id:
+                      type: string
+                      example: "BATCH12345"
+                    run_group:
+                      type: string
+                      example: "official"
+        '400':
+          description: Invalid request parameters
+        '404':
+          description: No records found
 components:
   schemas:
     Run:
