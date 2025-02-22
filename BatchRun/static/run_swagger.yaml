@@ -24,15 +24,24 @@ paths:
               properties:
                 type:
                   type: string
+                  enum:
+                    - CCAR
+                    - CECL
+                    - IFRS
+                    - RiskAppetite
                   description: Type of run
                 cob_date:
                   type: string
+                  format: date
+                  example: "2023-03-09"
                   description: COB date
                 run_group:
                   type: string
+                  example: "Group1"
                   description: Run group
                 scenario:
                   type: string
+                  example: "Scenario1"
                   description: Scenario
       responses:
         201:
@@ -44,21 +53,26 @@ paths:
                 properties:
                   run_id:
                     type: string
+                    example: "1234567890"
                     description: ID of the started run
+        400:
+          description: Invalid request
+        500:
+          description: Internal server error
   /run/{run_id}/status:
-    post:
+    get:
       summary: Get the status of a run
       description: Get the status of a run with the provided ID
       parameters:
         - in: path
           name: run_id
-          required: true
           schema:
             type: string
+          required: true
           description: ID of the run
       responses:
         200:
-          description: Run status retrieved successfully
+          description: Run status
           content:
             application/json:
               schema:
@@ -66,7 +80,14 @@ paths:
                 properties:
                   status:
                     type: string
-                    description: Status of the run
+                    example: "running"
+                  progress:
+                    type: number
+                    example: 0.5
+        404:
+          description: Run not found
+        500:
+          description: Internal server error
   /run/{run_id}/kill:
     post:
       summary: Kill a run
@@ -74,18 +95,48 @@ paths:
       parameters:
         - in: path
           name: run_id
-          required: true
           schema:
             type: string
+          required: true
           description: ID of the run
       responses:
         200:
           description: Run killed successfully
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    description: Success message
+        404:
+          description: Run not found
+        500:
+          description: Internal server error
+components:
+  schemas:
+    Run:
+      type: object
+      properties:
+        run_id:
+          type: string
+          example: "1234567890"
+          description: ID of the run
+        type:
+          type: string
+          example: "CCAR"
+          description: Type of run
+        cob_date:
+          type: string
+          format: date
+          example: "2023-03-09"
+          description: COB date
+        run_group:
+          type: string
+          example: "Group1"
+          description: Run group
+        scenario:
+          type: string
+          example: "Scenario1"
+          description: Scenario
+        status:
+          type: string
+          example: "running"
+          description: Status of the run
+        progress:
+          type: number
+          example: 0.5
+          description: Progress of the run

@@ -1,0 +1,135 @@
+[2025-02-21 21:51:08,734] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-02-21 21:51:08,734] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-02-21 21:51:08,734] INFO in _internal:  * Restarting with stat
+[2025-02-21 21:51:08,835] WARNING in _internal:  * Debugger is active!
+[2025-02-21 21:51:08,842] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 21:51:41,570] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "[32mGET / HTTP/1.1[0m" 302 -
+[2025-02-21 21:51:41,585] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "GET /static/index.html HTTP/1.1" 200 -
+[2025-02-21 21:51:41,604] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-02-21 21:51:41,629] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "[32mGET /swagger HTTP/1.1[0m" 308 -
+[2025-02-21 21:51:41,632] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "GET /swagger/ HTTP/1.1" 200 -
+[2025-02-21 21:51:41,638] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "GET /swagger/index.css HTTP/1.1" 200 -
+[2025-02-21 21:51:41,638] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "GET /swagger/swagger-ui.css HTTP/1.1" 200 -
+[2025-02-21 21:51:41,639] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "GET /swagger/swagger-ui-bundle.js HTTP/1.1" 200 -
+[2025-02-21 21:51:41,639] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "GET /swagger/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+[2025-02-21 21:51:41,715] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "GET /static/run_swagger.yaml HTTP/1.1" 200 -
+[2025-02-21 21:51:41,739] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 21:51:41] "GET /swagger/favicon-32x32.png HTTP/1.1" 200 -
+[2025-02-21 22:02:05,826] INFO in _internal:  * Detected change in '/Users/tejarajeevtenneti/projects/pulsarpoc/server.py', reloading
+[2025-02-21 22:02:05,846] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:02:06,004] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:02:06,008] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 22:02:11,698] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-02-21 22:02:11,698] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-02-21 22:02:11,698] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:02:11,792] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:02:11,795] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 22:02:24,285] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:02:24] "GET /swagger/ HTTP/1.1" 200 -
+[2025-02-21 22:02:24,299] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:02:24] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:02:24,299] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:02:24] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:02:24,300] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:02:24] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:02:24,301] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:02:24] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:02:24,339] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:02:24] "GET /static/run_swagger.yaml HTTP/1.1" 200 -
+[2025-02-21 22:02:24,342] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:02:24] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[2025-02-21 22:04:47,792] ERROR in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:47] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00+\x00\x07\x06\x8a\x8a\x03\x04\x03\x03\x00\x12\x00\x00ÿ\x01\x00\x01\x00\x00#\x00\x00\x00')
+[2025-02-21 22:04:47,793] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:47] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03^\x94T\x1dmÕ)êÈ\x9aÍ©÷:Ö~·e\x1f ªÊ$©¤áÇ}ÞI7j é\x95×Ú?4\x07Î\x8f\x9d\x1eéÒB-dI/r¢\x15í«øn¨\x10¹å\x82\x09\x02\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Súú\x00\x00\x00\x17\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00+\x00\x07\x06\x8a\x8a\x03\x04\x03\x03\x00\x12\x00\x00ÿ\x01\x00\x01\x00\x00#\x00\x00\x00[0m" 400 -
+[2025-02-21 22:04:47,793] ERROR in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:47] code 400, message Bad request version ('â')
+[2025-02-21 22:04:47,794] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:47] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03·ë\x85\x03\x1ea\x17.ÞÝÊå¡k\x1d&\x94Ç:Eû¤²Z)ç\x97\x9faË¨\x10 »\x1ags\x1fx¨kHÿ\x8aÝ¨\x9c\x83\x1e\x01\x02f\x835«×\x8eäO§\x8a\x19¹\x06x\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sjj\x00\x00þ\x0d\x00Ú\x00\x00\x01\x00\x01\x92\x00 æ×4\x1e¡ìo"Q\x17xçîÁL>¦N\x02#OqÙ@!M\x0e\x17\x84cóC\x00°\x8dU\x894`êK^-g=Q\x10µ\x0eåË\x12Ø¯\x99õ?¿¿p\x19t\x1f@5ê³\x09EQ¼Ü që\x96çÝZL\x87N?è\x0eaþ*|*gõûMÚ\x1aÁ\x9cw\x8c\x18u\x0dQÞ \x19Ê\x15±\x84}\x0fºV¼\x80\x19\x0bâ[0m" 400 -
+[2025-02-21 22:04:47,794] ERROR in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:47] code 400, message Bad request syntax ("\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03Õ*³\x8fñOºÚÚq$I\x07¨ÏD÷'\x1a")
+[2025-02-21 22:04:47,794] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:47] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03Õ*³\x8fñOºÚÚq$I\x07¨ÏD÷'\x1a[0m" 400 -
+[2025-02-21 22:04:47,794] ERROR in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:47] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03:ã\x95£ë\x92\x06y^9_×;eË\x8c³#á¦^nÍblÉ\x0f\x16ÕC\x10\x12')
+[2025-02-21 22:04:47,794] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:47] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03:ã\x95£ë\x92\x06y^9_×;eË\x8c³#á¦^nÍblÉ\x0f\x16ÕC\x10\x12 Ú\x8dØzM=\x10ÀÑ~q¹]õy¡[0m" 400 -
+[2025-02-21 22:04:56,991] ERROR in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:56] code 400, message Bad request version ('+\x93²\x8fËæ`j5¤42ÌÎÜ_fÈ¥S\x00\x90(IFk±')
+[2025-02-21 22:04:56,991] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:56] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03\x14nâõy»\x92ã¾\x84ð\x1c\x97ÂÎrÂ\x1f.\x9c\x87î\x08ã\x03\x07§\x81u\x01ør åK\x9c·*XúòË\x9c \x06­ùäê¦É\x16\x11pH×PÐ\x13"P\x7fk¿¥\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063êê\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01l\x00 "\x91UHKVO¹Ì|: +\x93²\x8fËæ`j5¤42ÌÎÜ_fÈ¥S\x00\x90(IFk±[0m" 400 -
+[2025-02-21 22:04:56,992] ERROR in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:56] code 400, message Bad request version ('\x00\x02\x01\x00\x00+\x00\x07\x06ÊÊ\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00')
+[2025-02-21 22:04:56,992] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:56] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03Ã¥VW]ËpÈÅ\x93µ?\x86º2z\x97+ËY\x13¨XE´\x91Lö¹Øb¤ n:l\x8b\x8f!5[\x12U\x9cPz»\x80/\x19\x97£\x97\x16÷6\x1c3=;á2#È§\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÚÚ\x00\x00ÿ\x01\x00\x01\x00\x00\x17\x00\x00\x00\x12\x00\x00\x00\x0b\x00\x02\x01\x00\x00+\x00\x07\x06ÊÊ\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00[0m" 400 -
+[2025-02-21 22:04:56,992] ERROR in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:56] code 400, message Bad request version ('`UéçnÛe\x01=\x9a¥E×N"2né\x13ÓðÇ¯Ó\x9a\x00\x12\x00\x00\x00')
+[2025-02-21 22:04:56,992] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:56] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03Ai1ÚHRüÌ¨Y[*;´$£!\x00\\sås\x8cA:\x96êÇØL\x94\x13 D%Õö)ri\x960rH`\x9c¬6Fs÷\x13¼âÍ@ô\x91ï×JO3\x81\x96\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SZZ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x17\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00+\x00\x07\x06úú\x03\x04\x03\x03\x00#\x00\x00Di\x00\x05\x00\x03\x02h2þ\x0d\x00Ú\x00\x00\x01\x00\x01è\x00 `n\x1fw\x01\x85Tã`m\x98j\x1a³a\x97nT\x0d\x03¶ò\x8f,G\x05ÁEW±P(\x00°.\x93Yc?`V\x08¦û\x9b2¸æ»tG*kNy#òÏ¦ÿ\x83Ò±nè±äéb\x13\x8aØÅï!Ï\x86\x8b<\x89y`\x9e.K\x1c\x88i«Rýâ\x97\x02ÁÊ³,ÄYD\x8c\x94\x15=zÃë¶=Ø«kKOÓoÚFÇ\x08\x14+«,ÃX\x1a¾âS2[\x03L®\x19SÅ+Î\\\x928eô3MO¦Î\x82~\x1a¥\x81H° ÊÇ\x94S\x9fLÞº\x98\x8a5'.\x7f\x8d|álx|uV!pS\x1e`UéçnÛe\x01=\x9a¥E×N"2né\x13ÓðÇ¯Ó\x9a\x00\x12\x00\x00\x00[0m" 400 -
+[2025-02-21 22:04:56,993] ERROR in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:56] code 400, message Bad request version ('\x93Æ*Y\x07£XA\x19å\x99#û8\x7fa*;å')
+[2025-02-21 22:04:56,993] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:04:56] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03qhUåbåây@­ \x0c\x9d$q\x19èâÃØ"-7Ú¯j\x0d²Îò¡ª iH#_V]?m\x1dE\x00Åý\x86\x1fsÔ2rCiÃ-\x19÷\x82SÝ"á\x94á\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x1a\x1a\x00\x00\x00\x12\x00\x00\x00-\x00\x02\x01\x01\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x0b\x00\x02\x01\x00\x003\x04ï\x04íºº\x00\x01\x00\x11ì\x04À»êhô\x0c>å,c\x13$\x16¦\x06\x95Ñp\x11+\x87À\x1fS¤6\x85À\x8a\x11^¥ò^ü¢A\x9c\x13\x97Ó& <h\x88¯8\x10\x9c\x81!ÝéVá\x98\x8d$Ó9\x86QHÿT «\x09v\x82Ù¾ÍÑ\x95\x98Zho@féê\x9dÂ\x9c\x11\x1fÅ\x13Þé\x05\x12ùH\x0cª\x86ÓÊFÉ\x02t\x13Å;õÃ\x84W¤[4Ó\x92Ðl\x8dHÛ\x84æ\x9a\x93óL¸\x96JS\x83Åyj\x90\x16Ug\x80õá\x09\x098\x01Nöh\x8c0!o»¶k)\x12r\x86Q\x9e§¹°+\x0b\x93Æ*Y\x07£XA\x19å\x99#û8\x7fa*;å[0m" 400 -
+[2025-02-21 22:05:43,893] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:05:43] "GET /swagger/ HTTP/1.1" 200 -
+[2025-02-21 22:05:43,906] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:05:43] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:05:43,907] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:05:43] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:05:43,908] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:05:43] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:05:43,908] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:05:43] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:05:43,985] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:05:43] "[36mGET /static/run_swagger.yaml HTTP/1.1[0m" 304 -
+[2025-02-21 22:07:22,470] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-02-21 22:07:22,470] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-02-21 22:07:22,470] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:07:22,562] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:07:22,566] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 22:07:30,621] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:07:30] "GET /swagger/ HTTP/1.1" 200 -
+[2025-02-21 22:07:30,640] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:07:30] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:07:30,641] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:07:30] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:07:30,647] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:07:30] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:07:30,647] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:07:30] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:07:30,678] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:07:30] "[36mGET /static/run_swagger.yaml HTTP/1.1[0m" 304 -
+[2025-02-21 22:07:30,679] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:07:30] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[2025-02-21 22:10:19,392] INFO in _internal:  * Detected change in '/Users/tejarajeevtenneti/projects/pulsarpoc/run_service.py', reloading
+[2025-02-21 22:10:19,412] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:10:19,557] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:10:19,561] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 22:10:40,957] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:10:40] "GET /swagger/ HTTP/1.1" 200 -
+[2025-02-21 22:10:40,983] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:10:40] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:10:40,984] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:10:40] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:10:40,986] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:10:40] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:10:40,986] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:10:40] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:10:41,022] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:10:41] "[36mGET /static/run_swagger.yaml HTTP/1.1[0m" 304 -
+[2025-02-21 22:10:41,023] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:10:41] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[2025-02-21 22:15:12,779] INFO in _internal:  * Detected change in '/Users/tejarajeevtenneti/projects/pulsarpoc/server.py', reloading
+[2025-02-21 22:15:12,797] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:15:12,952] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:15:12,958] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 22:16:44,320] INFO in _internal:  * Detected change in '/Users/tejarajeevtenneti/projects/pulsarpoc/server.py', reloading
+[2025-02-21 22:16:44,341] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:16:44,506] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:16:44,533] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 22:18:11,937] INFO in _internal:  * Detected change in '/Users/tejarajeevtenneti/projects/pulsarpoc/run_service.py', reloading
+[2025-02-21 22:18:11,962] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:18:12,063] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:18:12,067] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 22:19:46,766] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:19:46] "GET /swagger/ HTTP/1.1" 200 -
+[2025-02-21 22:19:46,792] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:19:46] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:19:46,793] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:19:46] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:19:46,793] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:19:46] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:19:46,793] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:19:46] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:19:46,867] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:19:46] "[36mGET /static/run_swagger.yaml HTTP/1.1[0m" 304 -
+[2025-02-21 22:19:46,868] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:19:46] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[2025-02-21 22:20:59,532] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-02-21 22:20:59,532] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-02-21 22:20:59,533] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:20:59,911] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:20:59,916] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 22:21:15,893] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:21:15] "GET /swagger/ HTTP/1.1" 200 -
+[2025-02-21 22:21:15,920] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:21:15] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:21:15,921] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:21:15] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:21:15,922] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:21:15] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[2025-02-21 22:21:15,923] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:21:15] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[2025-02-21 22:21:15,975] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:21:15] "[36mGET /static/run_swagger.yaml HTTP/1.1[0m" 304 -
+[2025-02-21 22:21:15,978] INFO in _internal: 127.0.0.1 - - [21/Feb/2025 22:21:15] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+[2025-02-21 22:27:23,882] INFO in _internal:  * Detected change in '/Users/tejarajeevtenneti/projects/pulsarpoc/server.py', reloading
+[2025-02-21 22:27:46,003] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:27:46,352] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:27:46,357] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 22:28:31,756] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-02-21 22:28:31,756] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-02-21 22:28:31,757] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:28:31,848] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:28:31,851] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-21 22:28:54,304] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2025-02-21 22:28:54,304] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-02-21 22:28:54,305] INFO in _internal:  * Restarting with stat
+[2025-02-21 22:28:54,644] WARNING in _internal:  * Debugger is active!
+[2025-02-21 22:28:54,649] INFO in _internal:  * Debugger PIN: 213-489-186
+[2025-02-22 10:42:32,275] INFO in _internal: 127.0.0.1 - - [22/Feb/2025 10:42:32] "GET /swagger/ HTTP/1.1" 200 -
+[2025-02-22 10:42:32,308] INFO in _internal: 127.0.0.1 - - [22/Feb/2025 10:42:32] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+[2025-02-22 10:42:32,309] INFO in _internal: 127.0.0.1 - - [22/Feb/2025 10:42:32] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+[2025-02-22 10:42:32,309] INFO in _internal: 127.0.0.1 - - [22/Feb/2025 10:42:32] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+[2025-02-22 10:42:32,310] INFO in _internal: 127.0.0.1 - - [22/Feb/2025 10:42:32] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+[2025-02-22 10:42:32,385] INFO in _internal: 127.0.0.1 - - [22/Feb/2025 10:42:32] "[36mGET /static/run_swagger.yaml HTTP/1.1[0m" 304 -
+[2025-02-22 10:42:32,386] INFO in _internal: 127.0.0.1 - - [22/Feb/2025 10:42:32] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -

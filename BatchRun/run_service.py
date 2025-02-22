@@ -1,4 +1,5 @@
 import logging
+from logging import config
 import sqlite3
 from concurrent.futures import ProcessPoolExecutor
 import time
@@ -6,26 +7,28 @@ import os
 import uuid
 import psutil
 
+
 # Set up logging configuration
-logging.config.dictConfig({
-    'version': 1,
-    'formatters': {
-        'default': {
-            'format': '[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
+def initialize():
+    logging.config.dictConfig({
+        'version': 1,
+        'formatters': {
+            'default': {
+                'format': '[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
+            }
+        },
+        'handlers': {
+            'file': {
+                'class': 'logging.FileHandler',
+                'filename': 'run_service.log',
+                'formatter': 'default'
+            }
+        },
+        'root': {
+            'level': 'INFO',
+            'handlers': ['file']
         }
-    },
-    'handlers': {
-        'file': {
-            'class': 'logging.FileHandler',
-            'filename': 'run_service.log',
-            'formatter': 'default'
-        }
-    },
-    'root': {
-        'level': 'INFO',
-        'handlers': ['file']
-    }
-})
+    })
 
 logger = logging.getLogger(__name__)
 
@@ -47,7 +50,7 @@ cursor.execute('''
 ''')
 conn.commit()
 
-def start_run(run_id, run_type, cob_date, run_group, scenario):
+def execute_run(run_id, run_type, cob_date, run_group, scenario):
     try:
         # Simulate work
         logger.info(f'Starting run {run_id}...')
@@ -67,14 +70,14 @@ def start_run(run_id, run_type, cob_date, run_group, scenario):
         cursor.execute('UPDATE runs SET status = ?, end_time = ? WHERE run_id = ?', ('failed', time.time(), run_id))
         conn.commit()
 
-def run_service(run_type, cob_date, run_group, scenario):
+def start_run(run_type, cob_date, run_group, scenario):
     # Create a new run ID
     run_id = str(uuid.uuid4())
     logger.info(f'Creating new run: {run_id}')
 
     # Start the run in a new process
     with ProcessPoolExecutor() as executor:
-        future = executor.submit(start_run, run_id, run_type, cob_date, run_group, scenario)
+        future = executor.submit(execute_run, run_id, run_type, cob_date, run_group, scenario)
         future.result()
 
     return run_id
