@@ -1,4 +1,4 @@
-from flask import Flask,jsonify,request, redirect,url_for
+from flask import Flask,request, redirect,url_for
 from flask_cors import CORS
 from flask_restful import Api, Resource, reqparse
 from flask_swagger_ui import get_swaggerui_blueprint
@@ -46,24 +46,24 @@ class Run(Resource):
 
         logger.info(f"Strting new run: type={run_type}, cob_date={cob_date}, run_group={run_group}, scenario={scenario}")
         runId = run_service.start_run(run_type,cob_date,run_group,scenario)
-        return jsonify({'runId': runId}), 201
+        return {'runId': runId}, 201
     
 
 
 # class to get run status 
 class RunStatus(Resource):
     """Get the status of a run given a runId"""
-    def post(self,runId):
+    def get(self,runId):
         logger.info(f"fetching status for run_id={runId}")
         status = run_service.get_run_status(runId)
-        return jsonify({'status':status}),200
+        return {'status':status},200
 
 class KillRun(Resource):
     """Kill a run given a runiD"""
     def post(self,runId):
         logger.info(f"Killing run_id={runId}")
         run_service.kill_run(runId)
-        return jsonify({'message': 'run killed successfully'}),200
+        return {'message': 'run killed successfully'},200
     
 api.add_resource(Run,'/run')
 api.add_resource(RunStatus,'/run/<string:runId>/status')
