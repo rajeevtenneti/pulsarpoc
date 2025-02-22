@@ -33,25 +33,29 @@ def initialize():
 logger = logging.getLogger(__name__)
 
 # Set up SQLite database connection
-DB_FILE = 'runs.db'
-conn = sqlite3.connect(DB_FILE)
-cursor = conn.cursor()
+def get_conn():
+    DB_FILE = 'runs.db'
+    conn = sqlite3.connect(DB_FILE)
+    cursor = conn.cursor()
 
-# Create table to store run status
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS runs (
-        run_id TEXT PRIMARY KEY,
-        status TEXT,
-        progress REAL,
-        start_time REAL,
-        end_time REAL,
-        pid INTEGER
-    )
-''')
-conn.commit()
+    # Create table to store run status
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS runs (
+            run_id TEXT PRIMARY KEY,
+            status TEXT,
+            progress REAL,
+            start_time REAL,
+            end_time REAL,
+            pid INTEGER
+        )
+    ''')
+    conn.commit()
+
+    return conn, cursor
 
 def execute_run(run_id, run_type, cob_date, run_group, scenario):
     try:
+        conn, cursor = get_conn()
         # Simulate work
         logger.info(f'Starting run {run_id}...')
         cursor.execute('INSERT INTO runs (run_id, status, progress, start_time, pid) VALUES (?, ?, 0.0, ?, ?)', (run_id, 'running', time.time(), os.getpid()))
@@ -69,6 +73,8 @@ def execute_run(run_id, run_type, cob_date, run_group, scenario):
         logger.error(f'Error running {run_id}: {e}')
         cursor.execute('UPDATE runs SET status = ?, end_time = ? WHERE run_id = ?', ('failed', time.time(), run_id))
         conn.commit()
+    finally:
+        conn.close()
 
 def start_run(run_type, cob_date, run_group, scenario):
     # Create a new run ID
@@ -84,6 +90,7 @@ def start_run(run_type, cob_date, run_group, scenario):
 
 def kill_run(run_id):
     try:
+        conn, cursor = get_conn()
         # Get the PID of the process
         cursor.execute('SELECT pid FROM runs WHERE run_id = ?', (run_id,))
         row = cursor.fetchone()
@@ -100,10 +107,14 @@ def kill_run(run_id):
             logger.error(f'Run {run_id} not found')
     except Exception as e:
         logger.error(f'Error killing run {run_id}: {e}')
+    finally:
+        conn.close()
 
 def get_run_status(run_id):
+    conn, cursor = get_conn()
     cursor.execute('SELECT status, progress FROM runs WHERE run_id = ?', (run_id,))
     row = cursor.fetchone()
+    conn.close()
     if row:
         status = row[0]
         progress = row[1]
@@ -112,9 +123,11 @@ def get_run_status(run_id):
         return {'error': 'Run not found'}
 
 def get_runs():
+    conn, cursor = get_conn()
     cursor.execute('SELECT run_id, status, progress FROM runs')
     rows = cursor.fetchall()
     runs = []
+    conn.close()
     for row in rows:
         run_id = row[0]
         status = row[1]
