@@ -1,0 +1,142 @@
+openapi: 3.0.2
+info:
+  title: Batch RUN API
+  description: API for managing the batch runs , you can trigger a run , get status given a runId , kill a run given a runId
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /api/run:
+    post:
+      summary: Start a new run
+      description: Start a new run with the provided parameters
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - type
+                - cob_date
+                - run_group
+                - scenario
+              properties:
+                type:
+                  type: string
+                  enum:
+                    - CCAR
+                    - CECL
+                    - IFRS
+                    - RiskAppetite
+                  description: Type of run
+                cob_date:
+                  type: string
+                  format: date
+                  example: "2023-03-09"
+                  description: COB date
+                run_group:
+                  type: string
+                  example: "Group1"
+                  description: Run group
+                scenario:
+                  type: string
+                  example: "Scenario1"
+                  description: Scenario
+      responses:
+        201:
+          description: Run started successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  run_id:
+                    type: string
+                    example: "1234567890"
+                    description: ID of the started run
+        400:
+          description: Invalid request
+        500:
+          description: Internal server error
+  /api/run/{run_id}/status:
+    get:
+      summary: Get the status of a run
+      description: Get the status of a run with the provided ID
+      parameters:
+        - in: path
+          name: run_id
+          schema:
+            type: string
+          required: true
+          description: ID of the run
+      responses:
+        200:
+          description: Run status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "running"
+                  progress:
+                    type: number
+                    example: 0.5
+        404:
+          description: Run not found
+        500:
+          description: Internal server error
+  /api/run/{run_id}/kill:
+    post:
+      summary: Kill a run
+      description: Kill a run with the provided ID
+      parameters:
+        - in: path
+          name: run_id
+          schema:
+            type: string
+          required: true
+          description: ID of the run
+      responses:
+        200:
+          description: Run killed successfully
+        404:
+          description: Run not found
+        500:
+          description: Internal server error
+components:
+  schemas:
+    Run:
+      type: object
+      properties:
+        run_id:
+          type: string
+          example: "1234567890"
+          description: ID of the run
+        type:
+          type: string
+          example: "CCAR"
+          description: Type of run
+        cob_date:
+          type: string
+          format: date
+          example: "2023-03-09"
+          description: COB date
+        run_group:
+          type: string
+          example: "Group1"
+          description: Run group
+        scenario:
+          type: string
+          example: "Scenario1"
+          description: Scenario
+        status:
+          type: string
+          example: "running"
+          description: Status of the run
+        progress:
+          type: number
+          example: 0.5
+          description: Progress of the run
