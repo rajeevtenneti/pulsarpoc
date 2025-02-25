@@ -1,0 +1,10 @@
+flask
+flask_restx
+pyYAML
+dotenv
+gradio
+langchain
+langchain_community
+langchain_openai
+
+

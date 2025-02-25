@@ -1,0 +1,97 @@
+openapi: 3.1.0
+info:
+  title: Batch Run API
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000  
+paths:
+  /runs:
+    post:
+      summary: Start a batch run
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                runType:
+                  type: string
+                  enum:
+                    - CCAR
+                    - RiskApetite
+                    - Stress
+                  description: Type of the run
+                runScenario:
+                  type: string
+                  description: Scenario for the run
+                  default: "Base"
+                cobDate:
+                  type: string
+                  description: Cut-off date for the run
+                  default: "20240724"
+                runGroup:
+                  type: string
+                  description: Group for the run
+                  default: "default_group"
+      responses:
+        '201':
+          description: Run started successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  runId:
+                    type: string
+                    description: ID of the started run
+  /runs/{runId}:
+    get:
+      summary: Get the status of a run
+      parameters:
+        - in: path
+          name: runId
+          required: true
+          description: ID of the run
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Run status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: Status of the run (e.g., running, completed, failed)
+    delete:
+      summary: Kill a run
+      parameters:
+        - in: path
+          name: runId
+          required: true
+          description: ID of the run to kill
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Run killed successfully
+  /runs/{runId}/log:
+    get:
+      summary: Get the log file for a run
+      parameters:
+        - in: path
+          name: runId
+          required: true
+          description: ID of the run to get the log
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Log file retrieved successfully
+          content:
+            text/plain:
+              schema:
+                type: string
