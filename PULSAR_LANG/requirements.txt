@@ -1,0 +1,10 @@
+langgraph
+langchain
+langchain_community
+langchainhub
+langchain_openai
+flask
+flask_restx
+pyYAML
+gradio
+dotenv

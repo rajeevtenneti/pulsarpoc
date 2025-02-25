@@ -1,0 +1,73 @@
+openapi: 3.1.0
+info:
+  title: Batch Results API
+  version: 1.0.0
+servers:
+  - url: http://localhost:5001  
+paths:
+  /stressResults:
+    get:
+      summary: Get Stress Results
+      parameters:
+        - in: query
+          name: runtype
+          required: true
+          description: Type of the run
+          schema:
+            type: string
+        - in: query
+          name: cob
+          required: true
+          description: Cut-off date for the run
+          schema:
+            type: string
+        - in: query
+          name: scenario
+          required: true
+          description: Scenario for the run
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully retrieved stress results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  link:
+                    type: string
+                    description: Clickable link to download DS2.xlsx
+  /allowanceResults:
+    get:
+      summary: Get Allowance Results
+      parameters:
+        - in: query
+          name: runtype
+          required: true
+          description: Type of the run
+          schema:
+            type: string
+        - in: query
+          name: cob
+          required: true
+          description: Cut-off date for the run
+          schema:
+            type: string
+        - in: query
+          name: scenario
+          required: true
+          description: Scenario for the run
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully retrieved allowance results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  link:
+                    type: string
+                    description: Clickable link to download DS1.xlsx
