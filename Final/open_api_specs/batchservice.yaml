@@ -28,8 +28,8 @@ paths:
                   default: "Base"
                 cobDate:
                   type: string
-                  description: Cut-off date for the run
-                  default: "20240724"
+                  description: Month end or Qtr end COB date for the run
+                  default: "20243112"
                 runGroup:
                   type: string
                   description: Group for the run
