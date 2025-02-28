@@ -4,7 +4,9 @@ pyYAML
 dotenv
 gradio
 langchain
+langgraph
 langchain_community
 langchain_openai
-
+langchain_experimental
+langchain_core
 
